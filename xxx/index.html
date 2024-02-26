@@ -19,7 +19,7 @@
 $tk = $_GET['tk'];$ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,"https://app.cloakerly.com/v2/verifyToken");
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS,"cid=23003&tk=$tk");
+curl_setopt($ch, CURLOPT_POSTFIELDS,"cid=23715&tk=$tk");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $r = curl_exec($ch); $d = json_decode($r, true); curl_close ($ch);
 if($d !== false)if(!$d['ss']==true)exit(header(sprintf("Location: %s", $d['s']))); ?>
